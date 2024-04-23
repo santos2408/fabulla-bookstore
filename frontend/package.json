@@ -31,7 +31,6 @@
     "eslint": "^8.49.0",
     "eslint-plugin-vue": "^9.17.0",
     "git-commit-msg-linter": "^5.0.7",
-    "husky": "^9.0.11",
     "json-server": "^0.17.4",
     "postcss": "^8.4.35",
     "prettier": "^3.0.3",
