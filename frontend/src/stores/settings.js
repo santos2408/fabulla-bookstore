@@ -5,8 +5,8 @@ export const GET_SETTINGS = "GET_SETTINGS";
 export const useSettingsStore = defineStore("settings", {
   state() {
     return {
-      logo_default: "storytelling-logo.svg",
-      logo_white: "favela-jobs-white-logo.svg",
+      logo_default: "fabulla-logo.svg",
+      // logo_white: "favela-jobs-white-logo.svg",
     };
   },
   actions: {

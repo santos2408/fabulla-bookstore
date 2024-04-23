@@ -1,14 +1,28 @@
 <template>
-  <header class="z-10 w-full px-4 lg:px-0">
+  <header class="w-full">
     <div class="relative">
       <!-- navigation mobile -->
-      <navigation-mobile />
-      <the-navigation />
+      <navigation-mobile v-show="menuStatus" @close-menu="handleMenuStatus" />
+      <the-navigation @open-menu="handleMenuStatus" />
     </div>
   </header>
 </template>
 
 <script setup>
+import { ref } from "vue";
 import NavigationMobile from "@/modules/landing-page/components/Navigation/NavigationMobile.vue";
 import TheNavigation from "@/modules/landing-page/components/Navigation/TheNavigation.vue";
+
+const menuStatus = ref(false);
+
+const handleMenuStatus = (payload) => {
+  menuStatus.value = payload;
+
+  if (menuStatus.value) {
+    document.body.classList.add("overflow-hidden");
+    return;
+  }
+
+  document.body.classList.remove("overflow-hidden");
+};
 </script>

@@ -1,55 +1,41 @@
 <template>
-  <div>
+  <div class="">
     <router-link
       :to="{ name: 'bookPage', params: { id: props.data.id } }"
       :data-book-id="props.data.id"
-      class="group"
+      class="group relative"
     >
-      <div class="mb-3 h-[250px] overflow-hidden rounded-xl">
-        <img
-          :src="props.data.image_url"
-          :alt="props.data.title"
-          class="h-full w-full object-cover"
-        />
-      </div>
+      <img
+        :src="getImageUrl('images/books', `${props.data.id}.png`)"
+        :alt="props.data.title"
+        class="mb-1 w-full rounded-xl md:mb-3"
+      />
 
       <div class="mb-4 flex flex-col">
         <h3
-          class="w-full truncate text-lg font-semibold group-hover:text-brand-primary-500"
+          class="w-full truncate text-base font-semibold group-hover:text-brand-primary-500 lg:text-lg"
           :title="props.data.title"
         >
           {{ props.data.title }}
         </h3>
-        <p class="w-full truncate text-sm text-brand-primary-300" :title="props.data.author">
+        <span
+          class="text-brand-primary-300 w-full truncate text-xs lg:text-sm"
+          :title="props.data.author"
+        >
           {{ props.data.author }}
-        </p>
+        </span>
       </div>
     </router-link>
-
-    <div class="flex items-center justify-between">
-      <div class="flex items-center gap-1">
-        <i class="pi pi-star-fill text-brand-orange-100"></i>
-        <span class="font-semibold text-brand-orange-100">4.7</span>
-      </div>
-
-      <span class="text-md font-semibold text-brand-gray-500">{{ price }}</span>
-    </div>
   </div>
 </template>
 
 <script setup>
-import { computed } from "vue";
+import { getImageUrl } from "@/utils/getImageUrl";
 
 const props = defineProps({
   data: {
     type: Object,
     required: true,
   },
-});
-
-const price = computed(() => {
-  return Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(
-    props.data.price,
-  );
 });
 </script>

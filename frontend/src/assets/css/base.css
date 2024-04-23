@@ -1,16 +1,14 @@
 :root {
-  --brand-white: rgb(255, 255, 255);
-  --brand-black: rgb(18, 18, 18);
-  --brand-primary-500: rgba(255, 119, 87);
-  --brand-secondary-500: rgb(255, 84, 120);
+  --brand-white: 255 255 255;
+  --brand-black: 0 0 0;
 
-  --brand-gradient: linear-gradient(
-    45deg,
-    var(--brand-primary-500) 0%,
-    var(--brand-secondary-500) 90%
-  );
-}
+  --brand-primary-50: 240 239 251;
+  --brand-primary-100: 209 205 241;
+  --brand-primary-200: 187 180 235;
+  --brand-primary-300: 157 146 226;
+  --brand-primary-500: 108 93 211;
+  --brand-primary-600: 98 85 192;
+  --brand-primary-700: 77 66 150;
 
-.brand-gradient {
-  background: var(--brand-gradient);
+  --brand-neutral-500: 39 39 39;
 }
