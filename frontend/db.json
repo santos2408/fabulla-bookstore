@@ -1,0 +1,12 @@
+{
+  "bannersHero": [
+    {
+      "id": 1,
+      "images": {
+        "mobile": "banner-1-500.png",
+        "tablet": "banner-1-700.png",
+        "desktop": "banner-1-1200.png"
+      }
+    }
+  ]
+}

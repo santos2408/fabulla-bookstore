@@ -1,0 +1,16 @@
+:root {
+  --brand-white: rgb(255, 255, 255);
+  --brand-black: rgb(18, 18, 18);
+  --brand-primary-500: rgba(255, 119, 87);
+  --brand-secondary-500: rgb(255, 84, 120);
+
+  --brand-gradient: linear-gradient(
+    45deg,
+    var(--brand-primary-500) 0%,
+    var(--brand-secondary-500) 90%
+  );
+}
+
+.brand-gradient {
+  background: var(--brand-gradient);
+}
