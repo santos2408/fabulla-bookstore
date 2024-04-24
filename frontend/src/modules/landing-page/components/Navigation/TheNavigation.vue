@@ -34,45 +34,18 @@
     </div> -->
 
     <div class="hidden gap-5 lg:flex">
-      <label
-        class="border-brand-primary-100 flex w-[640px] items-center rounded-xl border"
-        @click.prevent=""
-      >
-        <div
-          class="border-brand-primary-100 hover:bg-brand-primary-50 flex h-full cursor-pointer items-center gap-3 rounded-l-xl border-r px-4 transition duration-150"
-        >
-          <LayoutGrid color="#6c5dd3" size="22" />
-          <ul class="font-medium text-brand-primary-500">
-            <li>Menu</li>
-          </ul>
-          <ChevronDown color="#6c5dd3" size="18" />
-        </div>
-
-        <div class="h-full w-full px-4">
-          <input
-            type="text"
-            placeholder="Pesquisa entre milhares de livros"
-            class="h-full w-full rounded-xl border-none outline-0 ring-0 placeholder:text-sm"
-          />
-        </div>
-
-        <div
-          class="border-brand-primary-100 hover:bg-brand-primary-50 flex h-full cursor-pointer items-center gap-3 rounded-r-xl border-l px-6 transition duration-150"
-        >
-          <Search color="#6c5dd3" size="22" />
-        </div>
-      </label>
+      <input-search />
 
       <button
         type="button"
-        class="bg-brand-primary-50 hover:bg-brand-primary-600 rounded-xl px-6 py-4 font-medium text-brand-primary-500 transition duration-150 hover:text-brand-white"
+        class="rounded-xl bg-brand-primary-50 px-6 py-4 font-medium text-brand-primary-500 transition duration-150 hover:bg-brand-primary-600 hover:text-brand-white"
         @click="loginUser"
       >
         Entrar
       </button>
       <button
         type="button"
-        class="hover:bg-brand-primary-600 flex items-center gap-2 rounded-xl bg-brand-primary-500 px-6 py-4 font-medium text-brand-white transition duration-150"
+        class="flex items-center gap-2 rounded-xl bg-brand-primary-500 px-6 py-4 font-medium text-brand-white transition duration-150 hover:bg-brand-primary-600"
       >
         <UserRound size="21" />
         <span>Cadastre-se</span>
@@ -85,9 +58,10 @@
 import { ref, computed } from "vue";
 import { useRouter } from "vue-router";
 
-import { Menu, UserRound, LayoutGrid, ChevronDown, Search } from "lucide-vue-next";
+import { Menu, UserRound } from "lucide-vue-next";
 import LogoComponent from "@/components/shared/LogoComponent.vue";
 import DropdownProfile from "@/modules/landing-page/components/Navigation/Widget/DropdownProfile/DropdownProfile.vue";
+import InputSearch from "@/modules/landing-page/components/Navigation/Widget/Search/InputSearch.vue";
 
 // import { useNavigationStore, SET_MENU_STATUS } from "@/stores/navigation";
 import { useSettingsStore, GET_SETTINGS } from "@/stores/settings";
