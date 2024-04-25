@@ -1,9 +1,9 @@
 <template>
   <label
-    class="flex w-[700px] items-center rounded-xl border border-brand-primary-100"
+    class="flex w-[500px] items-center rounded-xl border border-brand-primary-100 xl:w-[700px]"
     @click.prevent=""
   >
-    <div class="relative h-full w-[140px] rounded-l-xl border-r border-brand-primary-100">
+    <div class="relative h-full w-[140px] rounded-l-xl">
       <div
         class="flex h-full cursor-pointer items-center justify-center gap-3 rounded-l-xl transition duration-150 hover:bg-brand-primary-50"
         @click="toggleSelect"
@@ -38,24 +38,25 @@
       </ul>
     </div>
 
-    <div class="h-full flex-1 px-4">
+    <div class="h-full flex-1">
       <input
         type="text"
         placeholder="Pesquise entre milhares de livros"
-        class="h-full w-full rounded-xl border-none outline-0 ring-0 placeholder:text-sm"
+        class="h-full w-full border-l border-r border-brand-primary-100 px-4 placeholder:text-base"
       />
     </div>
 
-    <div
-      class="flex h-full cursor-pointer items-center gap-3 rounded-r-xl border-l border-brand-primary-100 px-6 transition duration-150 hover:bg-brand-primary-50"
+    <button
+      type="submit"
+      class="flex h-full cursor-pointer items-center gap-3 rounded-r-xl border-brand-primary-100 px-6 transition duration-150 hover:bg-brand-primary-50"
     >
       <Search color="#6c5dd3" size="22" />
-    </div>
+    </button>
   </label>
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref } from "vue";
 import { LayoutGrid, ChevronDown, Search } from "lucide-vue-next";
 
 const searchCategories = ref([
