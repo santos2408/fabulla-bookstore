@@ -1,0 +1,28 @@
+<template>
+  <div class="flex items-center gap-5">
+    <button
+      type="button"
+      class="rounded-xl bg-brand-primary-50 px-6 py-4 font-medium text-brand-primary-500 transition duration-150 hover:bg-brand-primary-600 hover:text-brand-white"
+      @click="loginUser"
+    >
+      Entrar
+    </button>
+
+    <router-link
+      :to="{ name: 'auth' }"
+      class="flex items-center gap-2 rounded-xl bg-brand-primary-500 px-6 py-4 font-medium text-brand-white transition duration-150 hover:bg-brand-primary-600"
+    >
+      <UserRound size="21" />
+      <span>Cadastre-se</span>
+    </router-link>
+  </div>
+</template>
+
+<script setup>
+import { UserRound } from "lucide-vue-next";
+import { useUserStore, SET_LOGIN_STATUS } from "@/stores/user";
+
+const userStore = useUserStore();
+
+const loginUser = () => userStore[SET_LOGIN_STATUS](true);
+</script>
