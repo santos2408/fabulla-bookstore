@@ -1,16 +1,16 @@
 <template>
   <!-- main navigation -->
-  <div class="flex items-center justify-between py-6">
+  <div class="flex h-14 items-center justify-between">
     <div
       class="flex w-full items-center justify-between px-4 lg:w-auto lg:justify-start lg:gap-8 lg:px-0"
     >
-      <logo-component :logo="settings.logo_default" size="w-full h-10 sm:h-12" />
+      <logo-component :logo="settings.logo_default" size="h-full w-36" />
 
       <div class="flex gap-2 lg:hidden">
         <button
           type="button"
           arial-label="Abrir menu de navegação"
-          class="rounded-lg border p-2 hover:bg-brand-primary-50"
+          class="rounded-lg border p-3 hover:bg-brand-primary-50"
           @click="toggleInputSearch"
         >
           <Search class="text-brand-neutral-500" />
@@ -19,26 +19,15 @@
         <button
           type="button"
           arial-label="Abrir menu de navegação"
-          class="rounded-lg border p-2 hover:bg-brand-primary-50 lg:hidden"
+          class="rounded-lg border p-3 hover:bg-brand-primary-50"
           @click="emits('open-menu', true)"
         >
           <Menu class="text-brand-neutral-500" />
         </button>
       </div>
-
-      <div v-show="searchStatus" class="absolute left-0 top-24 w-full px-4 lg:hidden">
-        <label
-          class="relative flex w-full items-center justify-between gap-2 rounded-lg border border-brand-primary-100 bg-brand-white p-2 shadow"
-        >
-          <input type="text" placeholder="Pesquisar..." class="flex-1 p-2" />
-          <button type="submit">
-            <Search class="text-brand-primary-500" size="28" />
-          </button>
-        </label>
-      </div>
     </div>
 
-    <div class="hidden gap-5 lg:flex">
+    <div class="hidden h-full gap-5 lg:flex">
       <input-search />
       <authenticated-buttons v-if="loginStatus" />
       <authentication-buttons v-else />
@@ -47,7 +36,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { computed } from "vue";
 import { Menu, Search } from "lucide-vue-next";
 
 import LogoComponent from "@/components/shared/LogoComponent.vue";
@@ -63,12 +52,6 @@ const emits = defineEmits(["open-menu"]);
 const settingsStore = useSettingsStore();
 const userStore = useUserStore();
 
-const searchStatus = ref(false);
-
 const settings = computed(() => settingsStore[GET_SETTINGS]);
 const loginStatus = computed(() => userStore[LOGIN_STATUS]);
-
-const toggleInputSearch = () => {
-  searchStatus.value = !searchStatus.value;
-};
 </script>
