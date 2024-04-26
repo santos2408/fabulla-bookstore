@@ -1,5 +1,5 @@
 <template>
-  <header class="w-full">
+  <header class="w-full py-4">
     <div class="relative">
       <!-- navigation mobile -->
       <navigation-mobile v-show="menuStatus" @close-menu="handleMenuStatus" />
