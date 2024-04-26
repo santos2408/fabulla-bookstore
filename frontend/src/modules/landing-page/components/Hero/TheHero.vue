@@ -1,15 +1,17 @@
 <template>
   <section class="relative mb-8">
-    <div class="max-h-80 w-full overflow-hidden lg:rounded-xl lg:border">
+    <div class="relative w-full overflow-hidden lg:rounded-xl lg:border">
       <swiper-container ref="swiperHero" init="false" class="h-full">
         <swiper-slide v-for="banner in props.banners" :key="banner.id">
           <img
             ref="swiper-image"
-            :src="getImageUrl('images/banner', banner.image)"
+            :src="getImageUrl('banners', banner.image)"
             class="w-full object-cover"
           />
         </swiper-slide>
       </swiper-container>
+
+      <div class="swiper-hero-pagination"></div>
     </div>
   </section>
 </template>
@@ -28,6 +30,12 @@ const props = defineProps({
 const swiperHero = ref({});
 const swiperHeroOptions = {
   slidesPerView: 1,
+  pagination: {
+    el: ".swiper-hero-pagination",
+    bulletClass: "swiper-hero-pagination-bullet",
+    bulletActiveClass: "swiper-hero-pagination-bullet-active",
+    clickable: true,
+  },
 };
 
 onMounted(async () => {
