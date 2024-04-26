@@ -30,6 +30,10 @@ const props = defineProps({
 const swiperHero = ref({});
 const swiperHeroOptions = {
   slidesPerView: 1,
+  autoplay: {
+    delay: 8000,
+  },
+
   pagination: {
     el: ".swiper-hero-pagination",
     bulletClass: "swiper-hero-pagination-bullet",
