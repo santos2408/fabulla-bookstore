@@ -15,7 +15,7 @@
 
       <ul
         v-show="selectStatus"
-        class="absolute left-0 top-16 w-full overflow-hidden rounded-xl border border-brand-primary-100"
+        class="absolute left-0 top-16 z-10 w-full overflow-hidden rounded-xl border border-brand-primary-100 bg-brand-white shadow-sm"
       >
         <li
           v-for="searchCategory in searchCategories"

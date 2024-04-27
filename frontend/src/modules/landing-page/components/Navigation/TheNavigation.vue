@@ -28,7 +28,7 @@
     </div>
 
     <div class="hidden h-full gap-5 lg:flex">
-      <input-search />
+      <the-search />
       <authenticated-buttons v-if="loginStatus" />
       <authentication-buttons v-else />
     </div>
@@ -40,7 +40,7 @@ import { computed } from "vue";
 import { Menu, Search } from "lucide-vue-next";
 
 import LogoComponent from "@/components/shared/LogoComponent.vue";
-import InputSearch from "@/modules/landing-page/components/Navigation/Widget/Search/InputSearch.vue";
+import TheSearch from "@/modules/landing-page/components/Navigation/Widget/Search/TheSearch.vue";
 import AuthenticationButtons from "@/modules/landing-page/components/Navigation/Widget/AuthenticationButtons/AuthenticationButtons.vue";
 import AuthenticatedButtons from "@/modules/landing-page/components/Navigation/Widget/AuthenticatedButtons/AuthenticatedButtons.vue";
 

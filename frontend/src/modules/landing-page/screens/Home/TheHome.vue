@@ -2,6 +2,7 @@
   <main-content>
     <template #content>
       <the-hero :banners="banners" :loading="bannersLoading" />
+      <the-features />
       <!-- <book-group title="Destaques" class="px-4">
         <book-loader :loading="productsLoading" :amount="6">
           <swiper-container ref="swiperHighlights" init="false" class="h-full">
@@ -22,6 +23,7 @@ import { axios_api, API_BASE_URL } from "@/services/axios_api";
 
 import MainContent from "@/components/MainContent/MainContent.vue";
 import TheHero from "@/modules/landing-page/components/Hero/TheHero.vue";
+import TheFeatures from "@/modules/landing-page/components/Features/TheFeatures.vue";
 // import HeroLoader from "@/modules/landing-page/components/Hero/HeroLoader/HeroLoader.vue";
 // import BookGroup from "@/modules/landing-page/components/Books/Book/BookGroup/BookGroup.vue";
 // import BookLoader from "@/modules/landing-page/components/Books/Book/BookGroup/BookLoader.vue";

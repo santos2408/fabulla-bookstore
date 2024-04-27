@@ -1,5 +1,5 @@
 <template>
-  <section class="relative mb-8">
+  <section class="relative mb-6 lg:mb-14">
     <div class="relative w-full overflow-hidden lg:rounded-xl lg:border">
       <swiper-container ref="swiperHero" init="false" class="h-full">
         <swiper-slide v-for="banner in props.banners" :key="banner.id">

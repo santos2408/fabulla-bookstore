@@ -29,9 +29,9 @@
   }
 }
 
-/* body {
+body {
   height: 6000px;
-} */
+}
 
 /* .active-button {
   @apply rounded-lg bg-brand-primary-500 px-6 py-3 text-brand-white transition duration-150 hover:bg-brand-primary-600;
