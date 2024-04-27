@@ -3,11 +3,13 @@
     <div class="relative w-full overflow-hidden lg:rounded-xl lg:border">
       <swiper-container ref="swiperHero" init="false" class="h-full">
         <swiper-slide v-for="banner in props.banners" :key="banner.id">
-          <img
-            ref="swiper-image"
-            :src="getImageUrl('banners', banner.image)"
-            class="w-full object-cover"
-          />
+          <a href="#">
+            <img
+              ref="swiper-image"
+              :src="getImageUrl('banners', banner.image)"
+              class="w-full object-cover"
+            />
+          </a>
         </swiper-slide>
       </swiper-container>
 
@@ -31,7 +33,7 @@ const swiperHero = ref({});
 const swiperHeroOptions = {
   slidesPerView: 1,
   autoplay: {
-    delay: 8000,
+    delay: 10000,
   },
 
   pagination: {
