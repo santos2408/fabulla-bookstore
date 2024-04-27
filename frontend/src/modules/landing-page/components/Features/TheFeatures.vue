@@ -3,11 +3,7 @@
     <ul
       class="grid grid-cols-1 items-center justify-between justify-items-center gap-6 sm:grid-cols-2 lg:grid-cols-4"
     >
-      <li
-        v-for="feature in features"
-        :key="`feature-${feature.id}`"
-        class="flex flex-1 items-center gap-4"
-      >
+      <li v-for="feature in features" :key="`feature-${feature.id}`" class="flex flex-1 gap-4">
         <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-brand-primary-50 p-3">
           <component :is="feature.icon" class="h-6" />
         </div>
