@@ -1,5 +1,5 @@
 <template>
-  <div id="profile-container" class="relative hidden items-center gap-4 lg:flex">
+  <div id="profile-container" class="relative hidden cursor-pointer items-center gap-4 lg:flex">
     <div
       class="flex h-full cursor-pointer items-center justify-center rounded-xl border border-brand-primary-50 px-4 transition duration-150 hover:bg-brand-primary-50"
     >
