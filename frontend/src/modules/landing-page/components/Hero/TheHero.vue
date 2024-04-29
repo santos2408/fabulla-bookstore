@@ -44,7 +44,7 @@ const swiperHeroOptions = {
   },
 };
 
-onMounted(async () => {
+onMounted(() => {
   Object.assign(swiperHero.value, swiperHeroOptions);
   swiperHero.value.initialize();
 });
