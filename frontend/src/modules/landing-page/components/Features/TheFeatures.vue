@@ -1,9 +1,13 @@
 <template>
-  <div class="px-4 lg:mb-14 lg:px-0">
+  <div class="mb-7 px-4 lg:mb-20 lg:px-0">
     <ul
       class="grid grid-cols-1 items-center justify-between justify-items-center gap-6 sm:grid-cols-2 lg:grid-cols-4"
     >
-      <li v-for="feature in features" :key="`feature-${feature.id}`" class="flex flex-1 gap-4">
+      <li
+        v-for="feature in features"
+        :key="`feature-${feature.id}`"
+        class="flex flex-1 gap-4 lg:flex-col xl:flex-row"
+      >
         <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-brand-primary-50 p-3">
           <component :is="feature.icon" class="h-6" />
         </div>
@@ -37,7 +41,7 @@ const features = ref([
   {
     id: 1,
     title: "Pagamento Seguro",
-    description: "Realize suas compras com tranquilidade e segurança.",
+    description: "Realize suas compras com segurança e tranquilidade na Fabulla.",
     icon: shieldIcon,
   },
   {

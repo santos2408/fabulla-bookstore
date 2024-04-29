@@ -16,5 +16,35 @@
       "id": 4,
       "image": "hero-4.png"
     }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "cover": "01.png"
+    },
+    {
+      "id": 2,
+      "cover": "02.png"
+    },
+    {
+      "id": 3,
+      "cover": "03.png"
+    },
+    {
+      "id": 4,
+      "cover": "04.png"
+    },
+    {
+      "id": 5,
+      "cover": "05.png"
+    },
+    {
+      "id": 6,
+      "cover": "06.png"
+    },
+    {
+      "id": 7,
+      "cover": "07.png"
+    }
   ]
 }
