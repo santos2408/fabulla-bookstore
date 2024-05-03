@@ -6,8 +6,8 @@
       </hero-loader>
 
       <the-features />
-
       <the-recommended :books="books" />
+      <special-offers />
 
       <!-- <book-group title="Destaques" class="px-4">
         <book-loader :loading="productsLoading" :amount="6">
@@ -32,6 +32,7 @@ import TheHero from "@/modules/landing-page/components/Hero/TheHero.vue";
 import HeroLoader from "@/modules/landing-page/components/Hero/HeroLoader/HeroLoader.vue";
 import TheFeatures from "@/modules/landing-page/components/Features/TheFeatures.vue";
 import TheRecommended from "@/modules/landing-page/components/Recommended/TheRecommended.vue";
+import SpecialOffers from "@/modules/landing-page/components/SpecialOffers/SpecialOffers.vue";
 
 // import BookGroup from "@/modules/landing-page/components/Books/Book/BookGroup/BookGroup.vue";
 // import BookLoader from "@/modules/landing-page/components/Books/Book/BookGroup/BookLoader.vue";
@@ -77,8 +78,5 @@ onMounted(async () => {
   banners.value = heroBanners;
   books.value = recommendedBooks;
   bannersLoading.value = false;
-
-  // Object.assign(swiperHighlights.value, swiperHighlightsOptions.value);
-  // swiperHighlights.value.initialize();
 });
 </script>

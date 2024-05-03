@@ -1,5 +1,5 @@
 <template>
-  <section class="px-4 lg:px-0">
+  <section class="mb-20 px-4 lg:px-0">
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
       <div class="rounded-xl p-6 xl:px-10 xl:py-8" :style="recommendedBackgroundOptions">
         <div class="mb-6 sm:mb-8">
