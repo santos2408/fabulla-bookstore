@@ -24,14 +24,12 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-
 import lightningIcon from "@/components/icons/lightningIcon.vue";
 import shieldIcon from "@/components/icons/shieldIcon.vue";
 import likeIcon from "@/components/icons/likeIcon.vue";
 import starIcon from "@/components/icons/starIcon.vue";
 
-const features = ref([
+const features = [
   {
     id: 0,
     title: "Entrega Rápida",
@@ -56,5 +54,5 @@ const features = ref([
     description: "Satisfação garantida ou seu dinheiro de volta! Devolução sem complicações",
     icon: starIcon,
   },
-]);
+];
 </script>
