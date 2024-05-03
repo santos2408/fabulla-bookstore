@@ -12,7 +12,7 @@
           </p>
         </div>
 
-        <div class="relative">
+        <div class="relative select-none">
           <swiper-container ref="swiperRecommended" init="false">
             <swiper-slide v-for="book in props.books" :key="book.id">
               <a href="#">
@@ -45,7 +45,7 @@
           </p>
         </div>
 
-        <div class="relative">
+        <div class="relative select-none">
           <swiper-container ref="swiperPopular" init="false">
             <swiper-slide v-for="book in props.books" :key="book.id">
               <a href="#">

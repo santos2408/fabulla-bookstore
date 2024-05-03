@@ -45,7 +45,7 @@
 .swiper-button-recommended-prev,
 .swiper-button-popular-next,
 .swiper-button-popular-prev {
-  @apply absolute top-2/4 z-10 flex h-10 w-10 -translate-y-2/4 cursor-pointer items-center justify-center rounded-full bg-brand-white text-brand-primary-500 shadow-xl;
+  @apply absolute top-2/4 z-10 flex h-10 w-10 -translate-y-2/4 cursor-pointer items-center justify-center rounded-full bg-brand-white text-brand-primary-500 shadow-xl transition duration-150 hover:bg-brand-primary-500 hover:text-brand-white;
 }
 
 .swiper-button-recommended-disabled,
