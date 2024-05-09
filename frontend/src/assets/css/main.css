@@ -55,20 +55,20 @@
 
 /* ================= swiper-js special offers ================= */
 .swiper-button-special-offers-next {
-  @apply -right-4;
+  @apply left-2/4 ml-2;
 }
 
 .swiper-button-special-offers-prev {
-  @apply -left-4;
+  @apply right-2/4 mr-2;
 }
 
 .swiper-button-special-offers-next,
 .swiper-button-special-offers-prev {
-  @apply absolute top-2/4 z-10 flex h-10 w-10 -translate-y-2/4 cursor-pointer items-center justify-center rounded-full bg-brand-white text-brand-primary-500 shadow-xl transition duration-150 hover:bg-brand-primary-500 hover:text-brand-white;
+  @apply absolute -bottom-6 z-10 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border bg-transparent text-brand-primary-500 shadow-sm transition duration-150 hover:bg-brand-primary-200 lg:-bottom-10;
 }
 
 .swiper-button-special-offers-disabled {
-  @apply opacity-0;
+  @apply cursor-not-allowed opacity-60 hover:bg-transparent;
 }
 
 body {

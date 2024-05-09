@@ -6,15 +6,12 @@
       <swiper-container ref="swiperSpecialOffers" init="false">
         <swiper-slide v-for="book in books" :key="book.id" class="pb-12">
           <div class="overflow-hidden rounded-xl border bg-brand-white transition duration-300">
-            <div class="h-60 overflow-hidden">
+            <div class="flex h-44 items-center overflow-hidden lg:h-48 xl:h-60">
               <a href="#">
-                <img
-                  :src="getImageUrl('books', book.cover)"
-                  class="w-full rounded-md object-cover"
-                />
+                <img src="https://placehold.co/436x240" class="w-full object-cover" />
               </a>
             </div>
-            <div class="p-6">
+            <div class="p-4 lg:p-6">
               <h4 class="mb-4 text-xl font-semibold text-brand-neutral-500">
                 Biblioteca da meia noite
               </h4>
@@ -37,24 +34,24 @@
                 </li>
               </ul>
 
-              <p class="mb-2 text-brand-neutral-500">
+              <p class="mb-4 text-sm text-brand-neutral-500 md:text-base">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum ipsum eveniet eum.
                 Doloremque optio inventore asperiores! Maiores quis, a placeat, illum consectetur,
                 magni.
               </p>
 
-              <span class="mb-4 block font-medium text-brand-neutral-500">Kevin Smilley</span>
+              <span class="mb-6 block font-medium text-brand-neutral-500">Kevin Smilley</span>
 
               <div class="flex items-center justify-between">
                 <button
                   type="button"
-                  class="flex items-center gap-3 rounded-xl bg-brand-primary-500 px-6 py-4 font-medium text-brand-white transition duration-150 hover:bg-brand-primary-600"
+                  class="flex items-center justify-center gap-3 rounded-xl bg-brand-primary-500 px-4 py-4 font-medium text-brand-white transition duration-150 hover:bg-brand-primary-600"
                 >
                   <ShoppingCart size="21" />
-                  <span>Adicionar ao carrinho</span>
+                  <span class="text-sm sm:text-base">Adicionar ao carrinho</span>
                 </button>
 
-                <span class="text-xl font-bold text-brand-neutral-500">R$18,78</span>
+                <span class="text-lg font-bold text-brand-neutral-500">R$18,78</span>
               </div>
             </div>
           </div>
@@ -62,10 +59,10 @@
       </swiper-container>
 
       <div class="swiper-button-special-offers-next">
-        <ChevronRight />
+        <MoveRight size="20" />
       </div>
       <div class="swiper-button-special-offers-prev">
-        <ChevronLeft />
+        <MoveLeft size="20" />
       </div>
     </div>
   </section>
@@ -74,11 +71,11 @@
 <script setup>
 import { ref, onMounted } from "vue";
 
-import { ChevronRight, ChevronLeft, ShoppingCart } from "lucide-vue-next";
+import { ShoppingCart, MoveRight, MoveLeft } from "lucide-vue-next";
 import HeaderSection from "@/components/shared/HeaderSection.vue";
 
 import { axios_api, API_BASE_URL } from "@/services/axios_api";
-import { getImageUrl } from "@/utils/getImageUrl";
+// import { getImageUrl } from "@/utils/getImageUrl";
 
 const books = ref([]);
 const header = ref({
@@ -88,9 +85,9 @@ const header = ref({
 });
 const swiperSpecialOffers = ref({});
 const swiperSpecialOffersOption = {
-  slidesPerView: 2,
+  slidesPerView: 1,
   spaceBetween: 8,
-  freeMode: true,
+  centeredSlides: true,
 
   navigation: {
     nextEl: ".swiper-button-special-offers-next",
@@ -100,28 +97,36 @@ const swiperSpecialOffersOption = {
 
   breakpoints: {
     420: {
-      slidesPerView: 2.5,
-      spaceBetween: 12,
+      slidesPerView: 1.1,
     },
-    520: {
-      slidesPerView: 3,
-      spaceBetween: 16,
+    460: {
+      slidesPerView: 1.3,
+    },
+    560: {
+      slidesPerView: 1.5,
     },
     640: {
-      slidesPerView: 4,
-      spaceBetween: 16,
+      slidesPerView: 1.7,
     },
-    768: {
-      slidesPerView: 2.8,
-      spaceBetween: 12,
+    700: {
+      slidesPerView: 2,
+      centeredSlides: false,
     },
-    1024: {
+    840: {
+      slidesPerView: 2.3,
+      centeredSlides: false,
+    },
+    940: {
+      slidesPerView: 2.5,
+      centeredSlides: false,
+    },
+    1000: {
+      slidesPerView: 2.7,
+      centeredSlides: false,
+    },
+    1100: {
       slidesPerView: 3,
-      spaceBetween: 12,
-    },
-    1140: {
-      slidesPerView: 3,
-      spaceBetween: 32,
+      centeredSlides: false,
     },
   },
 
