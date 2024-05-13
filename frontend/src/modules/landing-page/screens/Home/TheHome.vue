@@ -8,17 +8,7 @@
       <the-features />
       <the-recommended :books="books" />
       <special-offers />
-      <flash-sale />
-
-      <!-- <book-group title="Destaques" class="px-4">
-        <book-loader :loading="productsLoading" :amount="6">
-          <swiper-container ref="swiperHighlights" init="false" class="h-full">
-            <swiper-slide v-for="product in products" :key="product.id">
-              <book-item :data="product" />
-            </swiper-slide>
-          </swiper-container>
-        </book-loader>
-      </book-group> -->
+      <flash-sale :books="flashSales" />
     </template>
   </main-content>
 </template>
@@ -42,43 +32,19 @@ import FlashSale from "@/modules/landing-page/components/FlashSale/FlashSale.vue
 
 const banners = ref([]);
 const books = ref([]);
+const flashSales = ref([]);
 const bannersLoading = ref(false);
-// const booksLoading = ref(false);
-
-// const swiperHighlights = ref({});
-// const swiperHighlightsOptions = ref({
-//   slidesPerView: 2.3,
-//   spaceBetween: 12,
-//   freeMode: true,
-
-//   breakpoints: {
-//     400: {
-//       slidesPerView: 2.5,
-//     },
-//     500: {
-//       slidesPerView: 3,
-//     },
-//     640: {
-//       slidesPerView: 4,
-//     },
-//     768: {
-//       slidesPerView: 5,
-//     },
-//     1024: {
-//       slidesPerView: 6,
-//       spaceBetween: 20,
-//     },
-//   },
-// });
 
 onMounted(async () => {
   bannersLoading.value = true;
 
   const { data: heroBanners } = await axios_api.get(`${API_BASE_URL}/bannersHero`);
   const { data: recommendedBooks } = await axios_api.get(`${API_BASE_URL}/books`);
+  const { data: flashSalesBooks } = await axios_api.get(`${API_BASE_URL}/flashSale`);
 
   banners.value = heroBanners;
   books.value = recommendedBooks;
+  flashSales.value = flashSalesBooks;
   bannersLoading.value = false;
 });
 </script>

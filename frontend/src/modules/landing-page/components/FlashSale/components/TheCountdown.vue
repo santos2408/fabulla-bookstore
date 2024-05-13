@@ -1,22 +1,24 @@
 <template>
-  <div class="mx-auto flex w-max items-center justify-center gap-16 rounded-xl border px-12 py-6">
+  <div
+    class="mx-auto flex w-[100%] items-center justify-between rounded-xl border p-6 sm:w-max sm:justify-center sm:gap-16 sm:px-12"
+  >
     <div class="flex flex-col items-center justify-center gap-2">
-      <span class="text-5xl font-bold text-orange-500">{{ countdown.days }}</span>
+      <span class="text-4xl font-bold text-orange-500 sm:text-5xl">{{ countdown.days }}</span>
       <span class="font-medium text-brand-neutral-500">{{ days }}</span>
     </div>
 
     <div class="flex flex-col items-center justify-center gap-2">
-      <span class="text-5xl font-bold text-orange-500">{{ countdown.hours }}</span>
+      <span class="text-4xl font-bold text-orange-500 sm:text-5xl">{{ countdown.hours }}</span>
       <span class="font-medium text-brand-neutral-500">{{ hours }}</span>
     </div>
 
     <div class="flex flex-col items-center justify-center gap-2">
-      <span class="text-5xl font-bold text-orange-500">{{ countdown.minutes }}</span>
+      <span class="text-4xl font-bold text-orange-500 sm:text-5xl">{{ countdown.minutes }}</span>
       <span class="font-medium text-brand-neutral-500">{{ minutes }}</span>
     </div>
 
     <div class="flex flex-col items-center justify-center gap-2">
-      <span class="text-5xl font-bold text-orange-500">{{ countdown.seconds }}</span>
+      <span class="text-4xl font-bold text-orange-500 sm:text-5xl">{{ countdown.seconds }}</span>
       <span class="font-medium text-brand-neutral-500">{{ seconds }}</span>
     </div>
   </div>

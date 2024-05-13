@@ -1,5 +1,5 @@
 <template>
-  <section class="px-4 lg:px-0 xl:mb-60">
+  <section class="mb-20 px-4 lg:px-0 xl:mb-48">
     <header-section :title="header.title" :description="header.description" />
 
     <div class="relative select-none">
@@ -7,9 +7,7 @@
         <swiper-slide v-for="book in books" :key="book.id" class="pb-12">
           <div class="overflow-hidden rounded-xl border bg-brand-white transition duration-300">
             <div class="flex h-44 items-center overflow-hidden lg:h-48 xl:h-60">
-              <a href="#">
-                <img src="https://placehold.co/436x240" class="w-full object-cover" />
-              </a>
+              <img src="https://placehold.co/436x240" class="w-full object-cover" />
             </div>
             <div class="p-4 lg:p-6">
               <h4 class="mb-4 text-xl font-semibold text-brand-neutral-500">
@@ -76,6 +74,7 @@ import HeaderSection from "@/components/shared/HeaderSection.vue";
 
 import { axios_api, API_BASE_URL } from "@/services/axios_api";
 // import { getImageUrl } from "@/utils/getImageUrl";
+// import { getFormattedCurrency } from "@/utils/formatters";
 
 const books = ref([]);
 const header = ref({
