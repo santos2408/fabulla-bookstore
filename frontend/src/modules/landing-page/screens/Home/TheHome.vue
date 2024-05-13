@@ -8,6 +8,7 @@
       <the-features />
       <the-recommended :books="books" />
       <special-offers />
+      <flash-sale />
 
       <!-- <book-group title="Destaques" class="px-4">
         <book-loader :loading="productsLoading" :amount="6">
@@ -33,6 +34,7 @@ import HeroLoader from "@/modules/landing-page/components/Hero/HeroLoader/HeroLo
 import TheFeatures from "@/modules/landing-page/components/Features/TheFeatures.vue";
 import TheRecommended from "@/modules/landing-page/components/Recommended/TheRecommended.vue";
 import SpecialOffers from "@/modules/landing-page/components/SpecialOffers/SpecialOffers.vue";
+import FlashSale from "@/modules/landing-page/components/FlashSale/FlashSale.vue";
 
 // import BookGroup from "@/modules/landing-page/components/Books/Book/BookGroup/BookGroup.vue";
 // import BookLoader from "@/modules/landing-page/components/Books/Book/BookGroup/BookLoader.vue";

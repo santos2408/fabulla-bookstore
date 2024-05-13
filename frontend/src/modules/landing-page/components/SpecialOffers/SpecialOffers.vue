@@ -1,5 +1,5 @@
 <template>
-  <section class="px-4 lg:px-0">
+  <section class="px-4 lg:px-0 xl:mb-60">
     <header-section :title="header.title" :description="header.description" />
 
     <div class="relative select-none">
