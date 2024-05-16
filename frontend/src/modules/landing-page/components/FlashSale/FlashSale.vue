@@ -1,5 +1,5 @@
 <template>
-  <section class="px-4 lg:px-0 xl:mb-20">
+  <section class="px-4 lg:px-0 xl:mb-36">
     <header-section :title="header.title" :description="header.description" />
     <the-countdown class="mb-8 sm:mb-20" />
 

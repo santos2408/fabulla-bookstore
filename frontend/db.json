@@ -114,5 +114,199 @@
       "discountPrice": "76.12",
       "cover": "05.png"
     }
+  ],
+  "booksOnSale": [
+    {
+      "id": 1,
+      "name": "A biblioteca da meia-noite",
+      "author": "Matt Haig",
+      "originalPrice": "40",
+      "discountPrice": "34.90",
+      "cover": "01.png"
+    },
+    {
+      "id": 2,
+      "name": "O último reino",
+      "author": "Bernard Cornwell",
+      "originalPrice": "70",
+      "discountPrice": "54.78",
+      "cover": "02.png"
+    },
+    {
+      "id": 3,
+      "name": "A Guerra dos Tronos",
+      "author": "George R.R Martin",
+      "originalPrice": "50",
+      "discountPrice": "34.56",
+      "cover": "03.png"
+    },
+    {
+      "id": 4,
+      "name": "O Poderoso Chefão",
+      "author": "Roger",
+      "originalPrice": "20",
+      "discountPrice": "14.56",
+      "cover": "04.png"
+    },
+    {
+      "id": 5,
+      "name": "Os miseráveis",
+      "author": "Victor Hugo",
+      "originalPrice": "99",
+      "discountPrice": "76.12",
+      "cover": "05.png"
+    },
+    {
+      "id": 6,
+      "name": "A biblioteca da meia-noite",
+      "author": "Matt Haig",
+      "originalPrice": "40",
+      "discountPrice": "34.90",
+      "cover": "01.png"
+    },
+    {
+      "id": 7,
+      "name": "A biblioteca da meia-noite",
+      "author": "Matt Haig",
+      "originalPrice": "40",
+      "discountPrice": "34.90",
+      "cover": "01.png"
+    },
+    {
+      "id": 8,
+      "name": "O último reino",
+      "author": "Bernard Cornwell",
+      "originalPrice": "70",
+      "discountPrice": "54.78",
+      "cover": "02.png"
+    },
+    {
+      "id": 9,
+      "name": "A Guerra dos Tronos",
+      "author": "George R.R Martin",
+      "originalPrice": "50",
+      "discountPrice": "34.56",
+      "cover": "03.png"
+    },
+    {
+      "id": 10,
+      "name": "O Poderoso Chefão",
+      "author": "Roger",
+      "originalPrice": "20",
+      "discountPrice": "14.56",
+      "cover": "04.png"
+    },
+    {
+      "id": 11,
+      "name": "Os miseráveis",
+      "author": "Victor Hugo",
+      "originalPrice": "99",
+      "discountPrice": "76.12",
+      "cover": "05.png"
+    },
+    {
+      "id": 12,
+      "name": "A biblioteca da meia-noite",
+      "author": "Matt Haig",
+      "originalPrice": "40",
+      "discountPrice": "34.90",
+      "cover": "01.png"
+    },
+    {
+      "id": 13,
+      "name": "A biblioteca da meia-noite",
+      "author": "Matt Haig",
+      "originalPrice": "40",
+      "discountPrice": "34.90",
+      "cover": "01.png"
+    },
+    {
+      "id": 14,
+      "name": "A biblioteca da meia-noite",
+      "author": "Matt Haig",
+      "originalPrice": "40",
+      "discountPrice": "34.90",
+      "cover": "01.png"
+    },
+    {
+      "id": 15,
+      "name": "O último reino",
+      "author": "Bernard Cornwell",
+      "originalPrice": "70",
+      "discountPrice": "54.78",
+      "cover": "02.png"
+    },
+    {
+      "id": 16,
+      "name": "A Guerra dos Tronos",
+      "author": "George R.R Martin",
+      "originalPrice": "50",
+      "discountPrice": "34.56",
+      "cover": "03.png"
+    },
+    {
+      "id": 17,
+      "name": "O Poderoso Chefão",
+      "author": "Roger",
+      "originalPrice": "20",
+      "discountPrice": "14.56",
+      "cover": "04.png"
+    },
+    {
+      "id": 18,
+      "name": "Os miseráveis",
+      "author": "Victor Hugo",
+      "originalPrice": "99",
+      "discountPrice": "76.12",
+      "cover": "05.png"
+    },
+    {
+      "id": 19,
+      "name": "A biblioteca da meia-noite",
+      "author": "Matt Haig",
+      "originalPrice": "40",
+      "discountPrice": "34.90",
+      "cover": "01.png"
+    },
+    {
+      "id": 20,
+      "name": "A biblioteca da meia-noite",
+      "author": "Matt Haig",
+      "originalPrice": "40",
+      "discountPrice": "34.90",
+      "cover": "01.png"
+    },
+    {
+      "id": 21,
+      "name": "A biblioteca da meia-noite",
+      "author": "Matt Haig",
+      "originalPrice": "40",
+      "discountPrice": "34.90",
+      "cover": "01.png"
+    },
+    {
+      "id": 22,
+      "name": "A biblioteca da meia-noite",
+      "author": "Matt Haig",
+      "originalPrice": "40",
+      "discountPrice": "34.90",
+      "cover": "01.png"
+    },
+    {
+      "id": 23,
+      "name": "A biblioteca da meia-noite",
+      "author": "Matt Haig",
+      "originalPrice": "40",
+      "discountPrice": "34.90",
+      "cover": "01.png"
+    },
+    {
+      "id": 24,
+      "name": "O Poderoso Chefão",
+      "author": "Roger",
+      "originalPrice": "20",
+      "discountPrice": "14.56",
+      "cover": "04.png"
+    }
   ]
 }

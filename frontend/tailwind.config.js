@@ -25,6 +25,8 @@ export default {
         "brand-primary-600": "rgb(var(--brand-primary-600))",
         "brand-primary-700": "rgb(var(--brand-primary-700))",
 
+        "brand-secondary-500": "rgb(var(--brand-secondary-500))",
+
         // neutral-colors
         "brand-neutral-100": "rgb(var(--brand-neutral-100))",
         "brand-neutral-200": "rgb(var(--brand-neutral-200))",

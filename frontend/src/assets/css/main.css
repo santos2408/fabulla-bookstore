@@ -71,6 +71,39 @@
   @apply cursor-not-allowed opacity-60 hover:bg-transparent;
 }
 
+/* ================= swiper-js books on sale ================= */
+.swiper-books-on-sale-pagination {
+  @apply flex items-center justify-center gap-4;
+}
+
+.swiper-books-on-sale-pagination-bullet {
+  @apply h-2 w-2 rounded-full bg-brand-primary-100;
+}
+
+.swiper-books-on-sale-pagination-bullet-active {
+  @apply bg-brand-primary-500 opacity-100;
+}
+
+.swiper-button-books-on-sale-next,
+.swiper-button-books-on-sale-prev {
+  @apply flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border bg-brand-primary-50 text-brand-primary-500 shadow-sm transition duration-150 hover:bg-brand-primary-200;
+}
+
+.swiper-button-books-on-sale-disabled {
+  @apply cursor-not-allowed opacity-50 hover:bg-brand-primary-50;
+}
+
+/* ===== 640px ===== */
+@media screen and (min-width: 40rem) {
+  .swiper-books-on-sale-pagination {
+    @apply bottom-6;
+  }
+
+  .swiper-books-on-sale-pagination-bullet {
+    @apply h-3 w-3;
+  }
+}
+
 body {
   height: 6000px;
 }

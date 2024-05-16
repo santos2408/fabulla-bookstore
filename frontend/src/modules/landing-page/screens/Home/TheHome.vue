@@ -9,6 +9,7 @@
       <the-recommended :books="books" />
       <special-offers />
       <flash-sale :books="flashSales" />
+      <books-on-sale :books="onSaleBooks" />
     </template>
   </main-content>
 </template>
@@ -25,6 +26,7 @@ import TheFeatures from "@/modules/landing-page/components/Features/TheFeatures.
 import TheRecommended from "@/modules/landing-page/components/Recommended/TheRecommended.vue";
 import SpecialOffers from "@/modules/landing-page/components/SpecialOffers/SpecialOffers.vue";
 import FlashSale from "@/modules/landing-page/components/FlashSale/FlashSale.vue";
+import BooksOnSale from "@/modules/landing-page/components/BooksOnSale/BooksOnSale.vue";
 
 // import BookGroup from "@/modules/landing-page/components/Books/Book/BookGroup/BookGroup.vue";
 // import BookLoader from "@/modules/landing-page/components/Books/Book/BookGroup/BookLoader.vue";
@@ -33,6 +35,7 @@ import FlashSale from "@/modules/landing-page/components/FlashSale/FlashSale.vue
 const banners = ref([]);
 const books = ref([]);
 const flashSales = ref([]);
+const onSaleBooks = ref([]);
 const bannersLoading = ref(false);
 
 onMounted(async () => {
@@ -41,10 +44,14 @@ onMounted(async () => {
   const { data: heroBanners } = await axios_api.get(`${API_BASE_URL}/bannersHero`);
   const { data: recommendedBooks } = await axios_api.get(`${API_BASE_URL}/books`);
   const { data: flashSalesBooks } = await axios_api.get(`${API_BASE_URL}/flashSale`);
+  const { data: booksOnSaleBooks } = await axios_api.get(`${API_BASE_URL}/booksOnSale`);
+
+  console.log(booksOnSaleBooks);
 
   banners.value = heroBanners;
   books.value = recommendedBooks;
   flashSales.value = flashSalesBooks;
+  onSaleBooks.value = booksOnSaleBooks;
   bannersLoading.value = false;
 });
 </script>
