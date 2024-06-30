@@ -1,7 +1,6 @@
 <template>
-  <header class="w-full py-6">
+  <header class="wrapper w-full py-6">
     <div class="relative">
-      <!-- navigation mobile -->
       <navigation-mobile v-show="menuStatus" @close-menu="handleMenuStatus" />
       <the-navigation @open-menu="handleMenuStatus" />
     </div>

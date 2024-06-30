@@ -1,71 +1,3 @@
-<template>
-  <section class="mb-20 px-4 lg:px-0 xl:mb-48">
-    <header-section :title="header.title" :description="header.description" />
-
-    <div class="relative select-none">
-      <swiper-container ref="swiperSpecialOffers" init="false">
-        <swiper-slide v-for="book in books" :key="book.id" class="pb-12">
-          <div class="overflow-hidden rounded-xl border bg-brand-white transition duration-300">
-            <div class="flex h-44 items-center overflow-hidden lg:h-48 xl:h-60">
-              <img src="https://placehold.co/436x240" class="w-full object-cover" />
-            </div>
-            <div class="p-4 lg:p-6">
-              <h4 class="mb-4 text-xl font-semibold text-brand-neutral-500">
-                Biblioteca da meia noite
-              </h4>
-
-              <ul class="mb-4 flex items-center gap-2">
-                <li
-                  class="rounded-full bg-brand-primary-50 px-4 py-2 text-xs font-medium text-brand-primary-500"
-                >
-                  Bibliografia
-                </li>
-                <li
-                  class="rounded-full bg-brand-primary-50 px-4 py-2 text-xs font-medium text-brand-primary-500"
-                >
-                  Thriller
-                </li>
-                <li
-                  class="rounded-full bg-brand-primary-50 px-4 py-2 text-xs font-medium text-brand-primary-500"
-                >
-                  Horror
-                </li>
-              </ul>
-
-              <p class="mb-4 text-sm text-brand-neutral-500 md:text-base">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum ipsum eveniet eum.
-                Doloremque optio inventore asperiores! Maiores quis, a placeat, illum consectetur,
-                magni.
-              </p>
-
-              <span class="mb-6 block font-medium text-brand-neutral-500">Kevin Smilley</span>
-
-              <div class="flex items-center justify-between">
-                <button
-                  type="button"
-                  class="flex items-center justify-center gap-3 rounded-xl bg-brand-primary-500 px-4 py-4 font-medium text-brand-white transition duration-150 hover:bg-brand-primary-600"
-                >
-                  <ShoppingCart size="21" />
-                  <span class="text-sm sm:text-base">Adicionar ao carrinho</span>
-                </button>
-
-                <span class="text-lg font-bold text-brand-neutral-500">R$18,78</span>
-              </div>
-            </div>
-          </div>
-        </swiper-slide>
-      </swiper-container>
-
-      <div class="swiper-button-special-offers-next">
-        <MoveRight size="20" />
-      </div>
-      <div class="swiper-button-special-offers-prev">
-        <MoveLeft size="20" />
-      </div>
-    </div>
-  </section>
-</template>
-
 <script setup>
 import { ref, onMounted } from "vue";
 
@@ -170,10 +102,78 @@ const swiperSpecialOffersOption = {
 };
 
 onMounted(async () => {
-  const { data: specialOffersBooks } = await axios_api.get(`${API_BASE_URL}/specialOffers`);
+  const { data: specialOffersBooks } = await axios_api.get(`${API_BASE_URL}/populars`);
   books.value = specialOffersBooks;
 
   Object.assign(swiperSpecialOffers.value, swiperSpecialOffersOption);
   swiperSpecialOffers.value.initialize();
 });
 </script>
+
+<template>
+  <section class="wrapper mb-20 px-4 xl:mb-48">
+    <HeaderSection :title="header.title" :description="header.description" />
+
+    <div class="relative select-none">
+      <swiper-container ref="swiperSpecialOffers" init="false">
+        <swiper-slide v-for="book in books" :key="book.id" class="pb-12">
+          <div class="overflow-hidden rounded-xl border bg-brand-white transition duration-300">
+            <div class="flex h-44 items-center overflow-hidden lg:h-48 xl:h-60">
+              <img src="https://placehold.co/436x240" class="w-full object-cover" />
+            </div>
+            <div class="p-4 lg:p-6">
+              <h4 class="mb-4 text-xl font-semibold text-brand-neutral-500">
+                Biblioteca da meia noite
+              </h4>
+
+              <ul class="mb-4 flex items-center gap-2">
+                <li
+                  class="rounded-full bg-brand-primary-50 px-4 py-2 text-xs font-medium text-brand-primary-500"
+                >
+                  Bibliografia
+                </li>
+                <li
+                  class="rounded-full bg-brand-primary-50 px-4 py-2 text-xs font-medium text-brand-primary-500"
+                >
+                  Thriller
+                </li>
+                <li
+                  class="rounded-full bg-brand-primary-50 px-4 py-2 text-xs font-medium text-brand-primary-500"
+                >
+                  Horror
+                </li>
+              </ul>
+
+              <p class="mb-4 text-sm text-brand-neutral-500 md:text-base">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum ipsum eveniet eum.
+                Doloremque optio inventore asperiores! Maiores quis, a placeat, illum consectetur,
+                magni.
+              </p>
+
+              <span class="mb-6 block font-medium text-brand-neutral-500">Kevin Smilley</span>
+
+              <div class="flex items-center justify-between">
+                <button
+                  type="button"
+                  class="flex items-center justify-center gap-3 rounded-xl bg-brand-primary-500 px-4 py-4 font-medium text-brand-white transition duration-150 hover:bg-brand-primary-600"
+                >
+                  <ShoppingCart size="21" />
+                  <span class="text-sm sm:text-base">Adicionar ao carrinho</span>
+                </button>
+
+                <span class="text-lg font-bold text-brand-neutral-500">R$18,78</span>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+
+      <div class="swiper-button-special-offers-next">
+        <MoveRight size="20" />
+      </div>
+      <div class="swiper-button-special-offers-prev">
+        <MoveLeft size="20" />
+      </div>
+    </div>
+  </section>
+</template>

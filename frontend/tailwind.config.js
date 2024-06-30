@@ -8,12 +8,16 @@ export default {
       sm: "640px",
       md: "768px",
       lg: "1024px",
+      "2lg": "1180px",
       xl: "1360px",
+      xxl: "1410px",
     },
+
     extend: {
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
+
       colors: {
         // new version
         "brand-white": "rgb(var(--brand-white))",
@@ -26,6 +30,7 @@ export default {
         "brand-primary-700": "rgb(var(--brand-primary-700))",
 
         "brand-secondary-500": "rgb(var(--brand-secondary-500))",
+        "brand-secondary-600": "rgb(var(--brand-secondary-600))",
 
         // neutral-colors
         "brand-neutral-100": "rgb(var(--brand-neutral-100))",

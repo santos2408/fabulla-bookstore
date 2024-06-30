@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto flex h-full w-full max-w-screen-xl flex-col lg:px-4">
+  <div class="flex h-full w-full flex-col">
     <the-header />
 
     <main class="h-max w-full flex-1">

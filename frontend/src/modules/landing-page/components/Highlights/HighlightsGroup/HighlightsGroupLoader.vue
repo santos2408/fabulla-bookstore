@@ -13,7 +13,7 @@ const props = defineProps({
 
 <template>
   <template v-if="props.loading">
-    <div v-for="n in props.amount" :key="`skeleton-${n}`" class="wrapper">
+    <div v-for="n in props.amount" :key="`skeleton-${n}`">
       <skeleton-component
         width="100%"
         height="27.5rem"

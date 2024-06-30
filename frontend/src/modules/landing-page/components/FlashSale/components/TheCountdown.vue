@@ -44,7 +44,7 @@ const seconds = computed(() =>
   countdown.seconds > 1 || countdown.seconds === 0 ? "Segundos" : "Segundo",
 );
 
-const endDate = new Date("2024-05-18 19:00:00"); // from database
+const endDate = new Date("2024-08-18 19:00:00"); // from database
 
 const updateCountdown = () => {
   const currentDateTimestamp = new Date().getTime();

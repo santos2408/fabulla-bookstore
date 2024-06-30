@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-7 px-4 lg:mb-20 lg:px-0">
+  <div class="wrapper mb-7 lg:mb-20">
     <ul
       class="grid grid-cols-1 items-center justify-between justify-items-center gap-6 sm:grid-cols-2 lg:grid-cols-4"
     >

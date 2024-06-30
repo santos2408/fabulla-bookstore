@@ -1,6 +1,7 @@
 // css styles
 import "@/assets/css/main.css";
 import "@/assets/css/base.css";
+import "@/assets/css/swipers.css";
 import "primeicons/primeicons.css";
 
 import { createApp } from "vue";

@@ -1,8 +1,24 @@
+<script setup>
+import { LockKeyhole, BookmarkCheck, Ban, ContactRound, Library, LogOut } from "lucide-vue-next";
+import { useEventListener } from "@/composables/useEventListener";
+
+const emit = defineEmits(["close-dropdown", "logout-user"]);
+
+const props = defineProps({
+  isActive: {
+    type: Boolean,
+    required: true,
+  },
+});
+
+useEventListener(window, "resize", () => emit("close-dropdown"));
+</script>
+
 <template>
   <div
     v-show="props.isActive"
     id="dropdown"
-    class="border-brand-neutral-100 z-50 hidden rounded-md border bg-white text-sm shadow-md lg:block"
+    class="z-50 hidden rounded-md border border-brand-neutral-100 bg-white text-sm shadow-md lg:block"
   >
     <ul class="flex flex-col border-b">
       <li class="text-brand-neutral-800 cursor-pointer px-4 py-3 hover:bg-brand-primary-50">
@@ -53,19 +69,3 @@
     </ul>
   </div>
 </template>
-
-<script setup>
-import { LockKeyhole, BookmarkCheck, Ban, ContactRound, Library, LogOut } from "lucide-vue-next";
-import { useEventListener } from "@/composables/useEventListener";
-
-const emit = defineEmits(["close-dropdown", "logout-user"]);
-
-const props = defineProps({
-  isActive: {
-    type: Boolean,
-    required: true,
-  },
-});
-
-useEventListener(window, "resize", () => emit("close-dropdown"));
-</script>

@@ -1,5 +1,4 @@
 <template>
-  <!-- main navigation -->
   <div class="flex h-14 items-center justify-between">
     <div
       class="flex w-full items-center justify-between px-4 lg:w-auto lg:justify-start lg:gap-8 lg:px-0"
@@ -9,7 +8,7 @@
       <div class="flex gap-2 lg:hidden">
         <button
           type="button"
-          arial-label="Abrir menu de navegação"
+          arial-label="Pesquisar"
           class="rounded-lg border p-3 hover:bg-brand-primary-50"
           @click="toggleInputSearch"
         >
