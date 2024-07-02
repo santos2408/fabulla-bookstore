@@ -69,7 +69,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="wrapper px-4 xl:mb-36">
+  <section class="wrapper mb-36 px-4">
     <HeaderSection :title="header.title" :description="header.description" />
     <TheCountdown class="mb-8 sm:mb-20" />
 

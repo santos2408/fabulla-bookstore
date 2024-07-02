@@ -14,9 +14,10 @@ const props = defineProps({
 
 const swiperBooksOnSale = ref({});
 const swiperBooksOnSaleOption = {
-  slidesPerView: 6,
+  slidesPerView: 2,
   spaceBetween: 24,
-  centeredSlides: true,
+  centeredSlides: false,
+  freeMode: true,
 
   pagination: {
     el: ".swiper-books-on-sale-pagination",
@@ -33,31 +34,31 @@ const swiperBooksOnSaleOption = {
 
   breakpoints: {
     420: {
-      slidesPerView: 1.1,
+      slidesPerView: 2,
     },
-    460: {
-      slidesPerView: 1.3,
+    520: {
+      slidesPerView: 2.5,
     },
-    560: {
-      slidesPerView: 1.5,
+    600: {
+      slidesPerView: 2.5,
     },
     640: {
-      slidesPerView: 1.7,
+      slidesPerView: 3,
     },
     700: {
-      slidesPerView: 2,
+      slidesPerView: 3.5,
       centeredSlides: false,
     },
-    840: {
-      slidesPerView: 2.3,
+    800: {
+      slidesPerView: 4,
       centeredSlides: false,
     },
     940: {
-      slidesPerView: 2.5,
+      slidesPerView: 4,
       centeredSlides: false,
     },
     1000: {
-      slidesPerView: 2.7,
+      slidesPerView: 5,
       centeredSlides: false,
     },
     1100: {
@@ -123,7 +124,7 @@ onMounted(async () => {
               <span class="font-semibold text-brand-secondary-500">4.5</span>
             </div>
 
-            <div class="flex items-baseline gap-2">
+            <div class="flex flex-col items-end gap-0 sm:flex-row sm:items-baseline sm:gap-2">
               <span class="text-md font-bold text-brand-neutral-500">
                 {{ getFormattedCurrency(book.discountPrice) }}
               </span>
