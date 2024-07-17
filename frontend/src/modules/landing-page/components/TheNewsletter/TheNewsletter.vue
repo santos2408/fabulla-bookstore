@@ -2,7 +2,7 @@
 
 <template>
   <section class="wrapper mb-20 px-4 xl:mb-48">
-    <div class="rounded-2xl bg-brand-primary-500 px-4 py-8 lg:py-16">
+    <div class="rounded-2xl bg-brand-primary-500 px-4 py-8 shadow-3xl lg:py-16">
       <h2
         class="mx-auto mb-6 max-w-[454px] text-center text-lg font-medium text-brand-white sm:mb-12 lg:max-w-2xl lg:text-2xl"
       >
