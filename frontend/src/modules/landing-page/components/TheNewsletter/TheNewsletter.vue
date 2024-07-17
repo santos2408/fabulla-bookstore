@@ -1,6 +1,4 @@
-<script setup>
-import { ref, onMounted } from "vue";
-</script>
+<script setup></script>
 
 <template>
   <section class="wrapper mb-20 px-4 xl:mb-48">
