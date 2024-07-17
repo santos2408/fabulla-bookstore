@@ -40,15 +40,17 @@ const statistics = ref([
         <li
           v-for="statistic in statistics"
           :key="statistic.id"
-          class="flex flex-col items-center gap-12"
+          class="flex flex-col items-center gap-6 sm:gap-12"
         >
           <div>
             <component :is="statistic.icon" />
           </div>
 
           <div class="flex flex-col gap-1 text-center">
-            <h2 class="text-4xl font-bold text-brand-neutral-500">{{ statistic.title }}</h2>
-            <p class="text-brand-neutral-200">{{ statistic.subtitle }}</p>
+            <h2 class="text-2xl font-bold text-brand-neutral-500 sm:text-4xl">
+              {{ statistic.title }}
+            </h2>
+            <p class="text-sm text-brand-neutral-200 sm:text-base">{{ statistic.subtitle }}</p>
           </div>
         </li>
       </ul>
