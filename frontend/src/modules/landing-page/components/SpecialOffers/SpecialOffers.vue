@@ -4,11 +4,6 @@ import { ref, onMounted } from "vue";
 import { ShoppingCart, MoveRight, MoveLeft } from "lucide-vue-next";
 import HeaderSection from "@/components/shared/HeaderSection.vue";
 
-import { axios_api, API_BASE_URL } from "@/services/axios_api";
-// import { getImageUrl } from "@/utils/getImageUrl";
-// import { getFormattedCurrency } from "@/utils/formatters";
-
-const books = ref([]);
 const header = ref({
   title: "Ofertas Especiais",
   description:
@@ -102,21 +97,18 @@ const swiperSpecialOffersOption = {
 };
 
 onMounted(async () => {
-  const { data: specialOffersBooks } = await axios_api.get(`${API_BASE_URL}/populars`);
-  books.value = specialOffersBooks;
-
   Object.assign(swiperSpecialOffers.value, swiperSpecialOffersOption);
   swiperSpecialOffers.value.initialize();
 });
 </script>
 
 <template>
-  <section class="wrapper mb-20 px-4 xl:mb-48">
+  <section class="wrapper mb-20 px-4 xl:mb-28">
     <HeaderSection :title="header.title" :description="header.description" />
 
     <div class="relative select-none">
       <swiper-container ref="swiperSpecialOffers" init="false">
-        <swiper-slide v-for="book in books" :key="book.id" class="pb-12">
+        <swiper-slide v-for="book in 6" :key="book.id" class="pb-12">
           <div class="overflow-hidden rounded-xl border bg-brand-white transition duration-300">
             <div class="flex h-44 items-center overflow-hidden lg:h-48 xl:h-60">
               <img src="https://placehold.co/436x240" class="w-full object-cover" />

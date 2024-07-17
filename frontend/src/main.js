@@ -30,7 +30,7 @@ app.use(PrimeVue, {
   pt: Lara,
 });
 
-// primevue components
+// primevue global components
 app.component("ButtonComponent", Button);
 app.component("SkeletonComponent", Skeleton);
 

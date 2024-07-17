@@ -11,11 +11,12 @@ import HighlightsGroup from "@/modules/landing-page/components/Highlights/Highli
 import HighlightsGroupLoader from "@/modules/landing-page/components/Highlights/HighlightsGroup/HighlightsGroupLoader.vue";
 import TheRecommendeds from "@/modules/landing-page/components/Highlights/HighlightsItems/TheRecommendeds.vue";
 import ThePopulars from "@/modules/landing-page/components/Highlights/HighlightsItems/ThePopulars.vue";
-
 import SpecialOffers from "@/modules/landing-page/components/SpecialOffers/SpecialOffers.vue";
 import FlashSale from "@/modules/landing-page/components/FlashSale/FlashSale.vue";
 import BooksOnSale from "@/modules/landing-page/components/BooksOnSale/BooksOnSale.vue";
 import FeaturedBooks from "@/modules/landing-page/components/FeaturedBooks/FeaturedBooks.vue";
+import TheTestimonials from "@/modules/landing-page/components/Testimonials/TheTestimonials.vue";
+import BlogPosts from "@/modules/landing-page/components/BlogPosts/BlogPosts.vue";
 
 // import BookGroup from "@/modules/landing-page/components/Books/Book/BookGroup/BookGroup.vue";
 // import BookLoader from "@/modules/landing-page/components/Books/Book/BookGroup/BookLoader.vue";
@@ -26,7 +27,6 @@ const recommendeds = ref([]);
 const populars = ref([]);
 const flashSales = ref([]);
 const onSaleBooks = ref([]);
-const featuredBooks = ref([]);
 
 const heroLoading = ref(true);
 const highlightsLoader = ref(true);
@@ -35,24 +35,20 @@ onMounted(async () => {
   heroLoading.value = true;
   highlightsLoader.value = true;
 
-  const promises = [
-    axios_api.get(`${API_BASE_URL}/banners`),
-    axios_api.get(`${API_BASE_URL}/recommendeds`),
-    axios_api.get(`${API_BASE_URL}/populars`),
-    axios_api.get(`${API_BASE_URL}/flashSale`),
-    axios_api.get(`${API_BASE_URL}/booksOnSale`),
-  ];
+  try {
+    const response = await axios_api.get(`${API_BASE_URL}/home`);
 
-  const responses = await Promise.all(promises);
+    banners.value = response.data.banners;
+    recommendeds.value = response.data.recommendeds;
+    populars.value = response.data.populars;
+    flashSales.value = response.data["flash-sales"];
+    onSaleBooks.value = response.data["books-on-sale"];
 
-  banners.value = responses[0].data;
-  recommendeds.value = responses[1].data;
-  populars.value = responses[2].data;
-  flashSales.value = responses[3].data;
-  onSaleBooks.value = responses[4].data;
-
-  heroLoading.value = false;
-  highlightsLoader.value = false;
+    heroLoading.value = false;
+    highlightsLoader.value = false;
+  } catch (error) {
+    console.log(error);
+  }
 });
 </script>
 
@@ -76,6 +72,8 @@ onMounted(async () => {
       <FlashSale :books="flashSales" />
       <BooksOnSale :books="onSaleBooks" />
       <FeaturedBooks />
+      <TheTestimonials />
+      <BlogPosts />
     </template>
   </MainContent>
 </template>

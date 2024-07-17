@@ -9,7 +9,7 @@ import TheButton from "@/components/shared/TheButton.vue";
 </script>
 
 <template>
-  <section class="w-[100%] bg-brand-primary-50 px-4 py-16 lg:px-0 xl:mb-36">
+  <section class="mb-20 w-[100%] bg-brand-primary-50 px-4 py-10 lg:px-0">
     <div class="wrapper">
       <div class="grid grid-cols-1 gap-8 lg:grid-cols-[670px_1fr] xl:gap-16">
         <div class="grid grid-cols-1 justify-between gap-12">
@@ -23,8 +23,10 @@ import TheButton from "@/components/shared/TheButton.vue";
             </p>
           </div>
 
-          <div class="grid grid-cols-[240px_1fr] gap-4 rounded-xl bg-brand-white p-6 shadow-3xl">
-            <div class="w-full flex-1 overflow-hidden">
+          <div
+            class="grid grid-cols-1 gap-4 rounded-xl bg-brand-white p-6 shadow-3xl sm:grid-cols-[240px_1fr]"
+          >
+            <div class="hidden flex-1 overflow-hidden sm:block sm:w-full">
               <img :src="getImageUrl('books', '03.png')" alt="" class="rounded-2xl" />
             </div>
 
@@ -69,14 +71,19 @@ import TheButton from "@/components/shared/TheButton.vue";
                   </div>
                 </div>
 
-                <div class="flex justify-between">
+                <div class="flex flex-col items-center justify-between gap-2 sm:flex-row">
                   <div class="flex items-center gap-2">
                     <span class="text-lg font-bold text-brand-neutral-500">R$ 39,90</span>
                     <span class="text-brand-neutral-200"><del>R$ 49,90</del></span>
                   </div>
 
-                  <div>
-                    <TheButton label="Adicionar" :icon="ShoppingCart" icon-pos="left" />
+                  <div class="w-[100%] sm:w-[initial]">
+                    <TheButton
+                      label="Adicionar"
+                      :icon="ShoppingCart"
+                      icon-pos="left"
+                      class="w-[100%] sm:w-[initial]"
+                    />
                   </div>
                 </div>
               </div>
@@ -84,7 +91,9 @@ import TheButton from "@/components/shared/TheButton.vue";
           </div>
         </div>
 
-        <div class="2lg:grid-cols-3 flex content-end gap-6 text-center lg:grid lg:grid-cols-2">
+        <div
+          class="hidden content-end gap-6 text-center sm:flex lg:grid lg:grid-cols-2 2lg:grid-cols-3"
+        >
           <div class="self-end overflow-hidden">
             <img :src="getImageUrl('books', '01.png')" alt="" class="rounded-2xl" />
           </div>
@@ -101,11 +110,11 @@ import TheButton from "@/components/shared/TheButton.vue";
             <img :src="getImageUrl('books', '04.png')" alt="" class="rounded-2xl" />
           </div>
 
-          <div class="2lg:block block self-start overflow-hidden lg:hidden">
+          <div class="block self-start overflow-hidden lg:hidden 2lg:block">
             <img :src="getImageUrl('books', '05.png')" alt="" class="rounded-2xl" />
           </div>
 
-          <div class="2lg:block block self-start overflow-hidden lg:hidden">
+          <div class="block self-start overflow-hidden lg:hidden 2lg:block">
             <img :src="getImageUrl('books', '06.png')" alt="" class="rounded-2xl" />
           </div>
         </div>

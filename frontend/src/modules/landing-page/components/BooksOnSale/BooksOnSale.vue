@@ -15,6 +15,7 @@ const props = defineProps({
 const swiperBooksOnSale = ref({});
 const swiperBooksOnSaleOption = {
   slidesPerView: 2,
+  slidesPerGroup: 1,
   spaceBetween: 24,
   centeredSlides: false,
   freeMode: true,
@@ -33,13 +34,7 @@ const swiperBooksOnSaleOption = {
   },
 
   breakpoints: {
-    420: {
-      slidesPerView: 2,
-    },
     520: {
-      slidesPerView: 2.5,
-    },
-    600: {
       slidesPerView: 2.5,
     },
     640: {
@@ -47,25 +42,18 @@ const swiperBooksOnSaleOption = {
     },
     700: {
       slidesPerView: 3.5,
-      centeredSlides: false,
     },
     800: {
       slidesPerView: 4,
-      centeredSlides: false,
-    },
-    940: {
-      slidesPerView: 4,
-      centeredSlides: false,
+      slidesPerGroup: 4,
     },
     1000: {
       slidesPerView: 5,
-      centeredSlides: false,
+      slidesPerGroup: 5,
     },
     1100: {
       slidesPerView: 6,
-      spaceBetween: 24,
       slidesPerGroup: 6,
-      centeredSlides: false,
     },
   },
 };
@@ -77,7 +65,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <section class="wrapper mb-20 px-4 xl:mb-48">
+  <section class="wrapper mb-20 px-4 xl:mb-20">
     <div class="relative mb-8 flex justify-between">
       <h2 class="text-4xl font-semibold">Livros</h2>
 
@@ -96,7 +84,7 @@ onMounted(async () => {
 
     <div>
       <swiper-container ref="swiperBooksOnSale" init="false">
-        <swiper-slide v-for="book in props.books" :key="book.id" class="pb-12">
+        <swiper-slide v-for="book in props.books" :key="book.id">
           <router-link :to="{ name: 'home' }" class="relative block">
             <div class="absolute top-5 z-10 rounded-r-2xl bg-brand-secondary-600 px-5 py-2">
               <span class="text-2xl font-semibold text-brand-white">50%</span>
