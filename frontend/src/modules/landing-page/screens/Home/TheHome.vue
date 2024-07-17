@@ -18,6 +18,7 @@ import FeaturedBooks from "@/modules/landing-page/components/FeaturedBooks/Featu
 import TheTestimonials from "@/modules/landing-page/components/Testimonials/TheTestimonials.vue";
 import BlogPosts from "@/modules/landing-page/components/BlogPosts/BlogPosts.vue";
 import TheStatistics from "@/modules/landing-page/components/TheStatistics/TheStatistics.vue";
+import TheNewsletter from "@/modules/landing-page/components/TheNewsletter/TheNewsletter.vue";
 
 // import BookGroup from "@/modules/landing-page/components/Books/Book/BookGroup/BookGroup.vue";
 // import BookLoader from "@/modules/landing-page/components/Books/Book/BookGroup/BookLoader.vue";
@@ -76,6 +77,7 @@ onMounted(async () => {
       <TheTestimonials />
       <BlogPosts />
       <TheStatistics />
+      <TheNewsletter />
     </template>
   </MainContent>
 </template>

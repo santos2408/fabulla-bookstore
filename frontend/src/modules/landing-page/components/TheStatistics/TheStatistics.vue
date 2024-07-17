@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref } from "vue";
 import iconGroup from "@/components/icons/iconGroup.vue";
 import iconBook from "@/components/icons/iconBook.vue";
 import iconStore from "@/components/icons/iconStore.vue";
