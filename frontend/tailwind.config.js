@@ -21,6 +21,7 @@ export default {
       colors: {
         // new version
         "brand-white": "rgb(var(--brand-white))",
+
         "brand-primary-50": "rgb(var(--brand-primary-50))",
         "brand-primary-100": "rgb(var(--brand-primary-100))",
         "brand-primary-200": "rgb(var(--brand-primary-200))",

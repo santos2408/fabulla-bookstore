@@ -1,3 +1,8 @@
+<script setup>
+import TheHeader from "@/modules/landing-page/components/Header/TheHeader.vue";
+import TheFooter from "@/modules/landing-page/components/TheFooter/TheFooter.vue";
+</script>
+
 <template>
   <div class="flex h-full w-full flex-col">
     <the-header />
@@ -7,9 +12,7 @@
         <slot name="content"></slot>
       </div>
     </main>
+
+    <TheFooter />
   </div>
 </template>
-
-<script setup>
-import TheHeader from "@/modules/landing-page/components/Header/TheHeader.vue";
-</script>
