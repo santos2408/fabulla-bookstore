@@ -3,13 +3,27 @@
 @tailwind utilities;
 
 * {
-  @apply outline-brand-primary-500;
+  @apply outline-brand-primary-500 transition duration-150 ease-in-out;
 }
 
 .wrapper {
-  @apply mx-auto max-w-screen-xl lg:px-4;
+  @apply mx-auto w-[100%] max-w-screen-xl lg:px-4;
 }
 
 body {
   height: 6000px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li,
+span {
+  @apply text-brand-neutral-500;
 }
