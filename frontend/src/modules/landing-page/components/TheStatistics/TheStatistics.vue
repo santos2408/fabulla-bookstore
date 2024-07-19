@@ -1,11 +1,11 @@
 <script setup>
-import { ref } from "vue";
+import { shallowRef } from "vue";
 import iconGroup from "@/components/icons/iconGroup.vue";
 import iconBook from "@/components/icons/iconBook.vue";
 import iconStore from "@/components/icons/iconStore.vue";
 import iconLeaf from "@/components/icons/iconLeaf.vue";
 
-const statistics = ref([
+const statistics = shallowRef([
   {
     id: 1,
     title: "125.663",
