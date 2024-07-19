@@ -155,9 +155,7 @@ onMounted(async () => {
           :key="`testimonial-${testimonial.id}`"
           class="pb-12"
         >
-          <div
-            class="border-brand-neutral-50 rounded-lg border bg-brand-white p-6 opacity-50 transition duration-300"
-          >
+          <div class="border-brand-neutral-50 rounded-lg border bg-brand-white p-6 opacity-50">
             <p class="mb-8 text-center font-medium text-brand-neutral-500 lg:px-6 lg:text-lg">
               A variedade de livros disponíveis é incrível! Sempre encontro o que estou procurando e
               mais um pouco. Atendimento de primeira!

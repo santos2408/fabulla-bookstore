@@ -2,7 +2,7 @@
   <div class="flex items-center gap-5">
     <button
       type="button"
-      class="h-full rounded-xl bg-brand-primary-50 px-6 font-medium text-brand-primary-500 transition duration-150 hover:bg-brand-primary-600 hover:text-brand-white"
+      class="h-full rounded-xl bg-brand-primary-50 px-6 font-medium text-brand-primary-500 hover:bg-brand-primary-600 hover:text-brand-white"
       @click="loginUser"
     >
       Entrar
@@ -10,10 +10,10 @@
 
     <router-link
       :to="{ name: 'auth' }"
-      class="flex h-full items-center gap-2 rounded-xl bg-brand-primary-500 px-6 font-medium text-brand-white transition duration-150 hover:bg-brand-primary-600"
+      class="flex h-full items-center gap-2 rounded-xl bg-brand-primary-500 px-6 font-medium hover:bg-brand-primary-600"
     >
-      <UserRound size="21" />
-      <span>Cadastre-se</span>
+      <UserRound size="21" class="text-brand-white" />
+      <span class="text-brand-white">Cadastre-se</span>
     </router-link>
   </div>
 </template>

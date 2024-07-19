@@ -1,13 +1,13 @@
 <template>
   <div id="profile-container" class="relative hidden cursor-pointer items-center gap-4 lg:flex">
     <div
-      class="flex h-full cursor-pointer items-center justify-center rounded-xl border border-brand-primary-50 px-4 transition duration-150 hover:bg-brand-primary-50"
+      class="flex h-full cursor-pointer items-center justify-center rounded-xl border border-brand-primary-50 px-4 hover:bg-brand-primary-50"
     >
       <Heart class="text-brand-neutral-500" size="21" />
     </div>
 
     <div
-      class="flex h-full cursor-pointer items-center justify-center rounded-xl border border-brand-primary-50 px-4 transition duration-150 hover:bg-brand-primary-50"
+      class="flex h-full cursor-pointer items-center justify-center rounded-xl border border-brand-primary-50 px-4 hover:bg-brand-primary-50"
     >
       <ShoppingCart class="text-brand-neutral-500" size="21" />
     </div>

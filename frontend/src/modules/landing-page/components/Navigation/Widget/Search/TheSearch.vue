@@ -5,7 +5,7 @@
   >
     <div class="relative h-full w-[140px] rounded-l-xl">
       <div
-        class="flex h-full cursor-pointer items-center justify-center gap-3 rounded-l-xl transition duration-150 hover:bg-brand-primary-50"
+        class="flex h-full cursor-pointer items-center justify-center gap-3 rounded-l-xl hover:bg-brand-primary-50"
         @click="toggleSelect"
       >
         <LayoutGrid color="#6c5dd3" size="22" />
@@ -25,8 +25,6 @@
             'p-3',
             'font-medium',
             'text-brand-primary-500',
-            'transition',
-            'duration-150',
             'hover:bg-brand-primary-50',
             selectedCategory === searchCategory.title ? 'bg-brand-primary-50' : '',
           ]"
@@ -48,7 +46,7 @@
 
     <button
       type="submit"
-      class="flex h-full cursor-pointer items-center gap-3 rounded-r-xl border-brand-primary-100 px-6 transition duration-150 hover:bg-brand-primary-50"
+      class="flex h-full cursor-pointer items-center gap-3 rounded-r-xl border-brand-primary-100 px-6 hover:bg-brand-primary-50"
     >
       <Search color="#6c5dd3" size="22" />
     </button>

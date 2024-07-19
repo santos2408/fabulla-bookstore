@@ -38,7 +38,7 @@ const props = defineProps({
 <template>
   <button
     :disabled="loading"
-    class="flex items-center justify-center gap-3 rounded-xl bg-brand-primary-500 px-4 py-4 font-medium text-brand-white transition duration-150 hover:bg-brand-primary-600"
+    class="flex items-center justify-center gap-3 rounded-xl bg-brand-primary-500 px-4 py-4 font-medium hover:bg-brand-primary-600"
     :class="{
       'flex items-center justify-center gap-2': icon,
       'cursor-pointer bg-brand-primary-600': loading,
@@ -46,15 +46,15 @@ const props = defineProps({
   >
     <template v-if="props.icon">
       <template v-if="props.iconPos === 'left'">
-        <component :is="props.icon" size="18" />
+        <component :is="props.icon" size="18" class="text-brand-white" />
       </template>
     </template>
 
-    <span class="text-sm sm:text-base">{{ props.label }}</span>
+    <span class="text-sm text-brand-white sm:text-base">{{ props.label }}</span>
 
     <template v-if="props.icon">
       <template v-if="props.iconPos === 'right'">
-        <component :is="props.icon" size="18" />
+        <component :is="props.icon" size="18" class="text-brand-white" />
       </template>
     </template>
   </button>

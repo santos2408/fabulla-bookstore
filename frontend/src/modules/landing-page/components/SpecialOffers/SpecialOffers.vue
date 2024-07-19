@@ -109,14 +109,12 @@ onMounted(async () => {
     <div class="relative select-none">
       <swiper-container ref="swiperSpecialOffers" init="false">
         <swiper-slide v-for="book in 6" :key="book.id" class="pb-12">
-          <div class="overflow-hidden rounded-xl border bg-brand-white transition duration-300">
+          <div class="overflow-hidden rounded-xl border bg-brand-white">
             <div class="flex h-44 items-center overflow-hidden lg:h-48 xl:h-60">
               <img src="https://placehold.co/436x240" class="w-full object-cover" />
             </div>
             <div class="p-4 lg:p-6">
-              <h4 class="mb-4 text-xl font-semibold text-brand-neutral-500">
-                Biblioteca da meia noite
-              </h4>
+              <h4 class="mb-4 text-xl font-semibold">Biblioteca da meia noite</h4>
 
               <ul class="mb-4 flex items-center gap-2">
                 <li
@@ -136,24 +134,24 @@ onMounted(async () => {
                 </li>
               </ul>
 
-              <p class="mb-4 text-sm text-brand-neutral-500 md:text-base">
+              <p class="mb-4 text-sm md:text-base">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum ipsum eveniet eum.
                 Doloremque optio inventore asperiores! Maiores quis, a placeat, illum consectetur,
                 magni.
               </p>
 
-              <span class="mb-6 block font-medium text-brand-neutral-500">Kevin Smilley</span>
+              <span class="mb-6 block font-medium">Kevin Smilley</span>
 
               <div class="flex items-center justify-between">
                 <button
                   type="button"
-                  class="flex items-center justify-center gap-3 rounded-xl bg-brand-primary-500 px-4 py-4 font-medium text-brand-white transition duration-150 hover:bg-brand-primary-600"
+                  class="flex items-center justify-center gap-3 rounded-xl bg-brand-primary-500 px-4 py-4 font-medium hover:bg-brand-primary-600"
                 >
-                  <ShoppingCart size="21" />
-                  <span class="text-sm sm:text-base">Adicionar ao carrinho</span>
+                  <ShoppingCart size="21" class="text-brand-white" />
+                  <span class="text-sm text-brand-white sm:text-base">Adicionar ao carrinho</span>
                 </button>
 
-                <span class="text-lg font-bold text-brand-neutral-500">R$18,78</span>
+                <span class="text-lg font-bold">R$18,78</span>
               </div>
             </div>
           </div>
