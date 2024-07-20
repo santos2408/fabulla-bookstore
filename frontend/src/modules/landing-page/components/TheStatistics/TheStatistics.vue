@@ -1,34 +1,31 @@
 <script setup>
 import { shallowRef } from "vue";
-import iconGroup from "@/components/icons/iconGroup.vue";
-import iconBook from "@/components/icons/iconBook.vue";
-import iconStore from "@/components/icons/iconStore.vue";
-import iconLeaf from "@/components/icons/iconLeaf.vue";
+import { UsersRound, BookText, Store, Leaf } from "lucide-vue-next";
 
 const statistics = shallowRef([
   {
     id: 1,
     title: "125.663",
     subtitle: "Clientes satisfeitos",
-    icon: iconGroup,
+    icon: UsersRound,
   },
   {
     id: 2,
     title: "+50.672",
     subtitle: "Coleções de livros",
-    icon: iconBook,
+    icon: BookText,
   },
   {
     id: 3,
     title: "1.562",
     subtitle: "Lojas cadastradas",
-    icon: iconStore,
+    icon: Store,
   },
   {
     id: 4,
     title: "457",
     subtitle: "Escritores famosos",
-    icon: iconLeaf,
+    icon: Leaf,
   },
 ]);
 </script>
@@ -43,7 +40,7 @@ const statistics = shallowRef([
           class="flex flex-col items-center gap-6 sm:gap-12"
         >
           <div>
-            <component :is="statistic.icon" />
+            <component :is="statistic.icon" size="72" class="text-brand-primary-500" />
           </div>
 
           <div class="flex flex-col gap-1 text-center">
