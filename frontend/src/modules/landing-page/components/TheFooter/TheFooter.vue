@@ -192,14 +192,14 @@ const settings = computed(() => settingsStore[GET_SETTINGS]);
         class="wrapper flex flex-col items-center justify-between gap-4 px-4 md:flex-row md:gap-0"
       >
         <p class="text-center text-brand-neutral-200">
-          Fabulla - Book Store Website - © 2024 Todos os direitos reservados
+          Fabulla - Bookstore Website - © 2024 Todos os direitos reservados
         </p>
         <div class="flex flex-col text-center md:text-left">
           <a href="#" class="text-brand-neutral-200 hover:text-brand-neutral-500"
             >Code with 🥓 by Roger</a
           >
-          <a href="#" class="text-brand-neutral-200 hover:text-brand-neutral-500"
-            >Inspired design by Peterdraw</a
+          <a href="#" class="text-brand-neutral-200 hover:text-brand-neutral-500">
+            Inspired design by Peterdraw</a
           >
         </div>
       </div>
