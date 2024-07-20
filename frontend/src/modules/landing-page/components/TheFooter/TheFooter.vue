@@ -143,13 +143,10 @@ const settings = computed(() => settingsStore[GET_SETTINGS]);
             <a href="#" class="text-brand-neutral-400 hover:text-brand-primary-500">Contate-nos</a>
           </li>
           <li>
-            <a href="#" class="text-brand-neutral-400 hover:text-brand-primary-500">Produtos</a>
+            <a href="#" class="text-brand-neutral-400 hover:text-brand-primary-500">Entrar</a>
           </li>
           <li>
-            <a href="#" class="text-brand-neutral-400 hover:text-brand-primary-500">Login</a>
-          </li>
-          <li>
-            <a href="#" class="text-brand-neutral-400 hover:text-brand-primary-500">Sign Up</a>
+            <a href="#" class="text-brand-neutral-400 hover:text-brand-primary-500">Cadastre-se</a>
           </li>
           <li>
             <a href="#" class="text-brand-neutral-400 hover:text-brand-primary-500">FAQ</a>
@@ -195,12 +192,8 @@ const settings = computed(() => settingsStore[GET_SETTINGS]);
           Fabulla - Bookstore Website - © 2024 Todos os direitos reservados
         </p>
         <div class="flex flex-col text-center md:text-left">
-          <a href="#" class="text-brand-neutral-200 hover:text-brand-neutral-500"
-            >Code with 🥓 by Roger</a
-          >
-          <a href="#" class="text-brand-neutral-200 hover:text-brand-neutral-500">
-            Inspired design by Peterdraw</a
-          >
+          <a href="#" class="text-brand-neutral-200">Code with 🥓 by Roger</a>
+          <a href="#" class="text-brand-neutral-200"> Inspired design by Peterdraw</a>
         </div>
       </div>
     </div>
