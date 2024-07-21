@@ -42,9 +42,3 @@ const background = computed(
     </div>
   </section>
 </template>
-
-<style scoped>
-.teste {
-  /* background-image: url(../../../../assets/images/utils/newsletter-bg.svg); */
-}
-</style>
