@@ -1,7 +1,10 @@
 <template>
   <header class="wrapper w-full py-6">
     <div class="relative">
-      <navigation-mobile v-show="menuStatus" @close-menu="handleMenuStatus" />
+      <Transition name="slide-fade">
+        <navigation-mobile v-show="menuStatus" @close-menu="handleMenuStatus" />
+      </Transition>
+
       <the-navigation @open-menu="handleMenuStatus" />
     </div>
   </header>
@@ -25,3 +28,23 @@ const handleMenuStatus = (payload) => {
   document.body.classList.remove("overflow-hidden");
 };
 </script>
+
+<style scoped>
+/*
+  Enter and leave animations can use different
+  durations and timing functions.
+*/
+.slide-fade-enter-active {
+  transition: all 0.2s;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.2s;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
+}
+</style>

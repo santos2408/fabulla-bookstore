@@ -4,7 +4,6 @@
       class="flex w-full items-center justify-between px-4 lg:w-auto lg:justify-start lg:gap-8 lg:px-0"
     >
       <logo-component :logo="settings.logo_default" size="h-full w-36" />
-
       <div class="flex gap-2 lg:hidden">
         <button
           type="button"
