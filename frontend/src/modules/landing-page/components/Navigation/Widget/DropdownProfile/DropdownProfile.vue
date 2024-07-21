@@ -1,5 +1,13 @@
 <script setup>
-import { LockKeyhole, BookmarkCheck, Ban, ContactRound, Library, LogOut } from "lucide-vue-next";
+import {
+  LockKeyhole,
+  BookmarkCheck,
+  // Ban,
+  ContactRound,
+  LogOut,
+  ShoppingCart,
+  Heart,
+} from "lucide-vue-next";
 import { useEventListener } from "@/composables/useEventListener";
 
 const emit = defineEmits(["close-dropdown", "logout-user"]);
@@ -22,15 +30,21 @@ useEventListener(window, "resize", () => emit("close-dropdown"));
   >
     <ul class="flex flex-col border-b">
       <li class="text-brand-neutral-800 cursor-pointer px-4 py-3 hover:bg-brand-primary-50">
-        <router-link :to="{ name: 'home' }" class="gap2 flex items-center gap-2">
-          <LockKeyhole size="18" class="text-brand-neutral-800" />
-          Alterar senha
+        <router-link :to="{ name: 'home' }" class="flex items-center gap-2">
+          <ContactRound size="18" class="text-brand-neutral-800" />
+          Meu Perfil
         </router-link>
       </li>
       <li class="text-brand-neutral-800 cursor-pointer px-4 py-3 hover:bg-brand-primary-50">
         <router-link :to="{ name: 'home' }" class="flex items-center gap-2">
-          <BookmarkCheck size="18" class="text-brand-neutral-800" />
-          Configurar buscas salvas
+          <ShoppingCart size="18" class="text-brand-neutral-800" />
+          Meu Carrinho
+        </router-link>
+      </li>
+      <li class="text-brand-neutral-800 cursor-pointer px-4 py-3 hover:bg-brand-primary-50">
+        <router-link :to="{ name: 'home' }" class="flex items-center gap-2">
+          <Heart size="18" class="text-brand-neutral-800" />
+          Lista de Desejos
         </router-link>
       </li>
     </ul>
@@ -38,25 +52,25 @@ useEventListener(window, "resize", () => emit("close-dropdown"));
     <ul class="flex flex-col border-b">
       <li class="text-brand-neutral-800 cursor-pointer px-4 py-3 hover:bg-brand-primary-50">
         <router-link :to="{ name: 'home' }" class="flex items-center gap-2">
+          <BookmarkCheck size="18" class="text-brand-neutral-800" />
+          Preferências
+        </router-link>
+      </li>
+      <li class="text-brand-neutral-800 cursor-pointer px-4 py-3 hover:bg-brand-primary-50">
+        <router-link :to="{ name: 'home' }" class="gap2 flex items-center gap-2">
+          <LockKeyhole size="18" class="text-brand-neutral-800" />
+          Alterar senha
+        </router-link>
+      </li>
+      <!-- <li class="text-brand-neutral-800 cursor-pointer px-4 py-3 hover:bg-brand-primary-50">
+        <router-link :to="{ name: 'home' }" class="flex items-center gap-2">
           <Ban size="18" class="text-brand-neutral-800" />
           Cancelar assinatura
         </router-link>
-      </li>
-      <li class="text-brand-neutral-800 cursor-pointer px-4 py-3 hover:bg-brand-primary-50">
-        <router-link :to="{ name: 'home' }" class="flex items-center gap-2">
-          <ContactRound size="18" class="text-brand-neutral-800" />
-          Dados pessoais e de contato
-        </router-link>
-      </li>
+      </li> -->
     </ul>
 
     <ul class="flex flex-col">
-      <li class="text-brand-neutral-800 cursor-pointer px-4 py-3 hover:bg-brand-primary-50">
-        <router-link :to="{ name: 'home' }" class="flex items-center gap-2">
-          <Library size="18" class="text-brand-neutral-800" />
-          Cadastro e assinatura
-        </router-link>
-      </li>
       <li
         class="text-brand-neutral-800 cursor-pointer px-4 py-3 hover:bg-brand-primary-50"
         @click="() => emit('logout-user')"
