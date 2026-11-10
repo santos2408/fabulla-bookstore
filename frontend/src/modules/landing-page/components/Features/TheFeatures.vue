@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper mb-7 lg:mb-20">
+  <section class="wrapper mb-7 lg:mb-20">
     <ul
       class="grid grid-cols-1 items-center justify-between justify-items-center gap-6 sm:grid-cols-2 lg:grid-cols-4"
     >
@@ -20,7 +20,7 @@
         </div>
       </li>
     </ul>
-  </div>
+  </section>
 </template>
 
 <script setup>

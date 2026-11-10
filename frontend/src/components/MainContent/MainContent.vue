@@ -5,7 +5,7 @@ import TheFooter from "@/modules/landing-page/components/TheFooter/TheFooter.vue
 
 <template>
   <div class="flex h-full w-full flex-col">
-    <the-header />
+    <TheHeader />
 
     <main class="h-max w-full flex-1">
       <div class="h-full w-full">

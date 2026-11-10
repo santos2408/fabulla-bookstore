@@ -1,3 +1,43 @@
+<script setup>
+import { ref } from "vue";
+import { LayoutGrid, ChevronDown, Search } from "lucide-vue-next";
+
+const searchCategories = ref([
+  {
+    id: 0,
+    title: "Tudo",
+  },
+  {
+    id: 1,
+    title: "Título",
+  },
+  {
+    id: 2,
+    title: "Editora",
+  },
+  {
+    id: 3,
+    title: "Autor",
+  },
+  {
+    id: 4,
+    title: "ISBN",
+  },
+]);
+
+const selectStatus = ref(false);
+const selectedCategory = ref("Tudo");
+
+const toggleSelect = () => {
+  selectStatus.value = !selectStatus.value;
+};
+
+const selectCategory = (event) => {
+  selectedCategory.value = event.target.dataset.select;
+  toggleSelect();
+};
+</script>
+
 <template>
   <label
     class="flex w-[500px] items-center rounded-xl border border-brand-primary-100 xl:w-[700px]"
@@ -52,43 +92,3 @@
     </button>
   </label>
 </template>
-
-<script setup>
-import { ref } from "vue";
-import { LayoutGrid, ChevronDown, Search } from "lucide-vue-next";
-
-const searchCategories = ref([
-  {
-    id: 0,
-    title: "Tudo",
-  },
-  {
-    id: 1,
-    title: "Título",
-  },
-  {
-    id: 2,
-    title: "Editora",
-  },
-  {
-    id: 3,
-    title: "Autor",
-  },
-  {
-    id: 4,
-    title: "ISBN",
-  },
-]);
-
-const selectStatus = ref(false);
-const selectedCategory = ref("Tudo");
-
-const toggleSelect = () => {
-  selectStatus.value = !selectStatus.value;
-};
-
-const selectCategory = (event) => {
-  selectedCategory.value = event.target.dataset.select;
-  toggleSelect();
-};
-</script>

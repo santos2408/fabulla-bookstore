@@ -1,7 +1,7 @@
 <template>
-  <base-layout>
-    <the-home />
-  </base-layout>
+  <BaseLayout>
+    <TheHome />
+  </BaseLayout>
 </template>
 
 <script setup>

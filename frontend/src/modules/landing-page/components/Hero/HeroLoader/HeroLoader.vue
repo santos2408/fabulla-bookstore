@@ -13,15 +13,19 @@ const props = defineProps({
 
 <template>
   <template v-if="props.loading">
-    <div v-for="n in props.amount" :key="`skeleton-${n}`" class="wrapper">
+    <section
+      v-for="n in props.amount"
+      :key="`skeleton-${n}`"
+      class="wrapper relative mb-6 lg:mb-14"
+    >
       <skeleton-component
         width="100%"
-        height="27.5rem"
-        border-radius="8px"
-        class="mb-8 bg-brand-primary-50"
+        height="27.75rem"
+        border-radius="12px"
+        class="mb-6 bg-brand-primary-50"
       >
       </skeleton-component>
-    </div>
+    </section>
   </template>
 
   <slot v-else></slot>

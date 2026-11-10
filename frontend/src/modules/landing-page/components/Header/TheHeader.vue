@@ -1,15 +1,3 @@
-<template>
-  <header class="wrapper w-full py-6">
-    <div class="relative">
-      <Transition name="slide-fade">
-        <navigation-mobile v-show="menuStatus" @close-menu="handleMenuStatus" />
-      </Transition>
-
-      <the-navigation @open-menu="handleMenuStatus" />
-    </div>
-  </header>
-</template>
-
 <script setup>
 import { ref } from "vue";
 import NavigationMobile from "@/modules/landing-page/components/Navigation/NavigationMobile.vue";
@@ -29,11 +17,19 @@ const handleMenuStatus = (payload) => {
 };
 </script>
 
+<template>
+  <header class="wrapper w-full py-6">
+    <nav class="relative">
+      <TheNavigation @open-menu="handleMenuStatus" />
+
+      <Transition name="slide-fade">
+        <NavigationMobile v-show="menuStatus" @close-menu="handleMenuStatus" />
+      </Transition>
+    </nav>
+  </header>
+</template>
+
 <style scoped>
-/*
-  Enter and leave animations can use different
-  durations and timing functions.
-*/
 .slide-fade-enter-active {
   transition: all 0.2s;
 }

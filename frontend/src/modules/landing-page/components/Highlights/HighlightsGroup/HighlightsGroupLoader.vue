@@ -16,9 +16,9 @@ const props = defineProps({
     <div v-for="n in props.amount" :key="`skeleton-${n}`">
       <skeleton-component
         width="100%"
-        height="27.5rem"
+        height="23.479375rem"
         border-radius="8px"
-        class="mb-8 bg-brand-primary-50"
+        class="bg-brand-primary-50"
       >
       </skeleton-component>
     </div>
