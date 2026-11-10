@@ -6,7 +6,7 @@
   "scripts": {
     "start": "",
     "build": "",
-    "dev": "",
+    "dev": "tsx --env-file=.env --watch src/server.ts",
     "test": ""
   },
   "keywords": [],
